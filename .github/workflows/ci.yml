@@ -1,5 +1,7 @@
 # Source: https://defn.io/2020/05/05/github-actions-for-racket-revised/
 
+name: CI
+
 on:
   - push
 
@@ -17,5 +19,12 @@ jobs:
           distribution: "full"
           version: "8.2"
 
+      - name: Install Package and its Dependencies
+        run: |
+          cd src/exercises/github-actions-for-racket
+          raco pkg install --auto --batch
+
       - name: Run Tests
-        run: raco test src/exercises/github-actions-for-racket/fibonacci.rkt
+        run: |
+          cd src/exercises/github-actions-for-racket
+          raco test fibonacci.rkt

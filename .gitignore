@@ -2,3 +2,4 @@
 *.rkt~
 *.bak
 *.pdf
+compiled/

@@ -15,6 +15,13 @@
        (+ x y)))))
 
 (module+ test
-  (require rackunit)
-  (check-equal? (stream->list (stream-take (fibs) 8))
-                '(1 1 2 3 5 8 13 21)))
+  (require rackcheck
+           rackunit)
+
+  (check-property
+   (property ([n (gen:integer-in 3 100)])
+     (define numbers (stream->list (stream-take (fibs) n)))
+     (for ([n (cddr numbers)]
+           [y (cdr numbers)]
+           [x numbers])
+       (check-eqv? (+ x y) n)))))
