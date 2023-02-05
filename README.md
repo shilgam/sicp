@@ -1,18 +1,18 @@
 # Structure and Interpretation of Computer Programs
-my solutions on SICP
 
-## Installing
-* see https://download.racket-lang.org/
+Solutions on SICP
 
-## Book
-* EN: http://mitpress.mit.edu/sicp/
-* RU: http://newstar.rinet.ru/~goga/sicp/sicp.pdf
+## Prerequisites
+- [Racket](https://download.racket-lang.org/)
+## Usage
 
-## Online Interpreter
-* https://repl.it/languages/Scheme
+1. Execute any file:
 
+        $ racket src/exercises/book/0103_Helloworld.rkt
 
-## Hexlet
-* https://ru.hexlet.io/courses/sicp
-
-  Фундаментальный курс, основанный на одноименной книге от профессоров MIT рассказывает об абстракции данных и кода, рекурсии, состоянии и метаязыковой абстракции. Первая часть соответствует первому разделу книги.
+## Notes
+-  Books
+    - EN: http://mitpress.mit.edu/sicp/
+    - RU: http://newstar.rinet.ru/~goga/sicp/sicp.pdf
+- Online Interpreter: https://repl.it/languages/Scheme
+- Hexlet course: https://ru.hexlet.io/courses/sicp
