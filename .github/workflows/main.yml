@@ -1,0 +1,21 @@
+# Source: https://defn.io/2020/05/05/github-actions-for-racket-revised/
+
+on:
+  - push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Install Racket
+        uses: Bogdanp/setup-racket@v1.6.1
+        with:
+          architecture: "x64"
+          distribution: "full"
+          version: "8.2"
+
+      - name: Run Tests
+        run: raco test src/exercises/github-actions-for-racket/fibonacci.rkt
